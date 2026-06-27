@@ -20,10 +20,9 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    "device/xiaomi/yunluo",
+    "device/mode1/md07p",
     "hardware/mediatek",
     "hardware/mediatek/libmtkperf_client",
-    "hardware/lineage/compat"
 ]
 
 
@@ -121,13 +120,13 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    "yunluo",
-    "xiaomi",
+    "md07p",
+    "mode1",
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
     check_elf=True,
-    add_firmware_proprietary_file=True,
+    # add_firmware_proprietary_file=True,
 )
 
 if __name__ == "__main__":

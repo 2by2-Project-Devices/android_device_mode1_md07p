@@ -1,14 +1,16 @@
-# Firmware from yunluo V816.0.7.0.ULYMIXM fastboot package
+# Firmware from Mode1/Mode1Pocket/MD-07P:15/AP3A.240905.015.A2/1770111972:user/release-keys
+connsys_bt.img;AB
+connsys_gnss.img;AB
+connsys_wifi.img;AB
 dpm.img;AB
 dtbo.img;AB
 gz.img;AB
 lk.img;AB
-logo.bin:logo.img;AB
 mcupm.img;AB
+md1img.img;AB
 pi_img.img;AB
-preloader_yunluo.bin:preloader_raw.img;AB
+preloader_md07p.bin:preloader_raw.img;AB
 scp.img;AB
 spmfw.img;AB
 sspm.img;AB
 tee.img;AB
-

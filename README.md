@@ -1,1 +1,1 @@
-# Device tree for the Redmi Pad (yunluo)
+# Device tree for the Mode1 Pocket (MD-07P)

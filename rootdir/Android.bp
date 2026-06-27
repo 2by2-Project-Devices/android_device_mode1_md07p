@@ -12,14 +12,14 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "fstab.mt6789",
-    src: "etc/fstab.mt6789",
+    name: "fstab.emmc",
+    src: "etc/fstab.emmc",
     vendor: true,
     vendor_ramdisk_available: true
 }
 
 prebuilt_etc {
-    name: "fstab.mt8781",
+    name: "fstab.mt6789",
     src: "etc/fstab.mt6789",
     vendor: true,
     vendor_ramdisk_available: true
@@ -59,13 +59,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.mt8781.rc",
-    src: "etc/init/hw/init.mt6789.rc",
-    sub_dir: "init/hw",
-    vendor: true
-}
-
-prebuilt_etc {
     name: "init.mt6789.rc",
     src: "etc/init/hw/init.mt6789.rc",
     sub_dir: "init/hw",
@@ -75,13 +68,6 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.mt6789.power.rc",
     src: "etc/init/hw/init.mt6789.power.rc",
-    sub_dir: "init/hw",
-    vendor: true
-}
-
-prebuilt_etc {
-    name: "init.mt6789.usb.rc",
-    src: "etc/init/hw/init.mt6789.usb.rc",
     sub_dir: "init/hw",
     vendor: true
 }

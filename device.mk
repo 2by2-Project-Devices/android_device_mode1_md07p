@@ -25,6 +25,7 @@ AB_OTA_PARTITIONS := \
     system_ext \
     vendor \
     vendor_dlkm \
+    odm_dlkm \
     product \
     vbmeta \
     vbmeta_system \
@@ -55,11 +56,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Compressed Virtual A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
-# AAPT
-PRODUCT_CHARACTERISTICS := tablet
-
 # Audio
-$(call soong_config_set,android_hardware_audio,run_64bit,true)
+$(call soong_config_set_bool,android_hardware_audio,run_64bit,true)
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@7.0-impl:64 \
@@ -136,7 +134,7 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/input_suspend)
 $(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
 $(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
-$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
+$(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 
 # Health
 PRODUCT_PACKAGES += \
@@ -185,7 +183,6 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors-service.xiaomi-multihal \
     android.hardware.sensors@2.0-subhal-impl-1.0:64 \
     sensors.dynamic_sensor_hal
 
@@ -209,7 +206,7 @@ PRODUCT_PACKAGES += \
     android.hardware.usb.gadget-service.mediatek
 
 # Enable audio accessory support
-$(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
+$(call soong_config_set_bool,android_hardware_mediatek_usb,audio_accessory_supported,true)
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -280,7 +277,6 @@ PRODUCT_PACKAGES += \
     init.connectivity.rc \
     init.mi_thermald.rc \
     init.mt6789.rc \
-    init.mt8781.rc \
     init.mt6789.power.rc \
     init.mt6789.usb.rc \
     init.mtkgki.rc \
@@ -288,17 +284,20 @@ PRODUCT_PACKAGES += \
     init.sensor_2_0.rc \
     ueventd.mt6789.rc \
     init.recovery.usb.rc \
+    fstab.emmc \
     fstab.mt6789 \
-    fstab.mt8781 \
-    fstab.mt8781.vendor_ramdisk \
     fstab.mt6789.vendor_ramdisk
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.emmc:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.emmc \
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6789:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6789
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
-    hardware/xiaomi \
+    hardware/mode1 \
     hardware/google/interfaces \
     hardware/google/pixel
 
@@ -306,4 +305,4 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Inherit our proprietary vendor
-$(call inherit-product, vendor/xiaomi/yunluo/yunluo-vendor.mk)
+$(call inherit-product, vendor/mode1/md07p/md07p-vendor.mk)
