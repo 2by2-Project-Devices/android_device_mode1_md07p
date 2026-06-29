@@ -142,10 +142,10 @@ ro.mtk_key_manager_support=1
 
 # Hardware
 ro.hardware.egl=meow
-ro.hardware.gatekeeper=beanpod
+ro.hardware.gatekeeper=trustkernel
 ro.hardware.gralloc=common
 ro.hardware.hwcomposer=mtk_common
-ro.hardware.kmsetkey=beanpod
+ro.hardware.kmsetkey=trustkernel
 ro.hardware.vulkan=mali
 
 # LMKD
@@ -171,7 +171,7 @@ ro.vendor.mediatek.version.release=alps-mp-s0.mp1.tc8sp2-cs1-xm.V1.0.13_mode1.s0
 
 # Mediatek
 ro.vendor.mgk_name=mikrn
-ro.vendor.mgvi_name=mihal
+ro.vendor.mgvi_name=mgvi_64_armv82
 ro.vendor.mml.mtk_mml_support=0
 ro.vendor.mtk.c2.vdec.fmt.support.level=1
 ro.vendor.mtk.sensor.support=yes
