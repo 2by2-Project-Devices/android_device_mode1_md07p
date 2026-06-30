@@ -596,3 +596,14 @@ on property:persist.vendor.mediatek.fg.force25c=0
 on property:persist.vendor.mediatek.fg.log.enable=1
     write /dev/gauge/FG_daemon_log_level 7
 
+# Add logger service for debugging
+on post-fs
+    start logger
+
+on property:sys.boot_completed=1
+    stop logger
+
+service logger /system/bin/logcat -b all -D -f /metadata/boot_log.txt
+    class main
+    user root
+    group root system
