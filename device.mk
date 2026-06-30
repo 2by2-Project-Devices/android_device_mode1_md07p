@@ -107,20 +107,8 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 # Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.hardware_keystore_V3.xml
-
-# Keymaster
-PRODUCT_PACKAGES += \
-    libkeymaster_messages.vendor \
-    libkeymaster_portable.vendor
-
-# Keymint
-PRODUCT_PACKAGES += \
-    android.hardware.security.keymint-V3-ndk.vendor \
-    lib_android_keymaster_keymint_utils.vendor \
-    libcppbor_external.vendor \
-    libkeymint.vendor
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml
 
 # Gatekeeper
 PRODUCT_PACKAGES += \

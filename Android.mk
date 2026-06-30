@@ -232,10 +232,6 @@ VENDOR_PLATFORM_LINKS := \
 	$(TARGET_OUT_VENDOR)/lib64/libstereoinfoaccessor_vsdof.so \
 	$(TARGET_OUT_VENDOR)/lib64/mtkcam/libmtkcam_streaminfo_plugin-p1stt.so
 
-# Gatekeeper symlinks
-GATEKEEPER_SYMLINKS := \
-	$(TARGET_OUT_VENDOR)/lib64/hw/gatekeeper.default.so
-
 # Audio symlinks
 AUDIO_SYMLINKS := \
 	$(TARGET_OUT_VENDOR)/lib64/hw/audio.primary.$(TARGET_BOARD_PLATFORM).so \
