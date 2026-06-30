@@ -285,8 +285,7 @@ PRODUCT_PACKAGES += \
     ueventd.mt6789.rc \
     init.recovery.usb.rc \
     fstab.emmc \
-    fstab.mt6789 \
-    fstab.mt6789.vendor_ramdisk
+    fstab.mt6789
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.emmc:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.emmc \
