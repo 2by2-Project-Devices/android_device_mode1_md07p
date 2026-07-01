@@ -248,15 +248,15 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResOverlayYunluo \
-    SettingsResOverlayYunluo \
+    FrameworksResOverlayMD07P \
+    SettingsResOverlayMD07P \
     NcmTetheringOverlay \
-    WifiResOverlayYunluo
+    WifiResOverlayMD07P
 
 # Overlays (Lineage)
 PRODUCT_PACKAGES += \
-    LineageSDKOverlayYunluo \
-    PowerOffAlarmOverlayYunluo
+    LineageSDKOverlayMD07P \
+    PowerOffAlarmOverlayMD07P
 
 # Init scripts
 PRODUCT_PACKAGES += \

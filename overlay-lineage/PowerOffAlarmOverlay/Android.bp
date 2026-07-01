@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "PowerOffAlarmOverlayYunluo",
+    name: "PowerOffAlarmOverlayMD07P",
     product_specific: true,
 }

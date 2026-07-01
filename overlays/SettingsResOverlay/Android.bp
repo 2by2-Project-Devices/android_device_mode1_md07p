@@ -4,7 +4,7 @@
 //
 
 runtime_resource_overlay {
-    name: "SettingsResOverlayYunluo",
+    name: "SettingsResOverlayMD07P",
     sdk_version: "current",
     vendor: true,
     resource_dirs: ["res"]
