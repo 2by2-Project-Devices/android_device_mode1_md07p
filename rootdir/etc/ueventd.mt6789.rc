@@ -65,6 +65,29 @@
 /dev/st21nfc              0660   nfc        radio
 /dev/st54spi              0660   secure_element        secure_element
 
+#GOODIX NFC
+/dev/gsn11	0660   nfc        nfc
+/sys/nfc/nfc_chip_type	0666  system   system
+/sys/nfc/nfc_fwupdate	0666  system   system
+/sys/nfc/nfc_sim_switch	0666  system   system
+/sys/nfc/nfc_sim_status	0666  system   system
+/sys/nfc/nfc_enable_status	0666  system   system
+/sys/nfc/nfc_wired_ese_type	0666  system   system
+/sys/nfc/nfc_activated_se_info	0666  system   system
+/sys/nfc/nfc_hal_dmd	0666  system   system
+/sys/nfc/nfc_clk_src	0666  system   system
+/sys/nfc/nfc_switch_state	0666  system   system
+/sys/nfc/nfc_at_result	0666  system   system
+/sys/nfc/nfc_recovery_close_nfc	0666  system   system
+/sys/nfc/nfc_close_type	0666  system   system
+/sys/nfc/nfc_svdd_sw	0666  system   system
+/sys/nfc/nfcservice_lock	0666  system   system
+/sys/nfc/nfc_fw_version	0666  system   system
+/sys/nfc/nfc_hal_open_completed	0666  system   system
+/sys/nfc/cos_update_state	0666  system   system
+/vendor/etc/libnfc-goodix-RF.conf	0666  system   system
+/data/vendor/nfc/libnfc-nxpTransit.conf	0666  system   system
+
 # MTK BTIF driver
 /dev/btif                 0600   system     system
 
@@ -90,6 +113,10 @@
 
 #v4l2 codec
 /dev/vcu    0660 camera system
+
+#vdec-fmt
+/dev/vdec-fmt   0660 media system
+/dev/fmt_sync   0660 system system
 
 #v4l2 camera
 /dev/mtk_hcp     0660 camera system
@@ -141,15 +168,40 @@
 /sys/devices/platform/leds-mt65xx/leds/red   delay_off      0664  system   system
 /sys/devices/platform/leds-mt65xx/leds/blue   delay_on      0664  system   system
 /sys/devices/platform/leds-mt65xx/leds/blue   delay_off      0664  system   system
+/sys/class/leds/green   delay_on      0664  system   system
+/sys/class/leds/green   delay_off      0664  system   system
+/sys/class/leds/red   delay_on      0664  system   system
+/sys/class/leds/red   delay_off      0664  system   system
+/sys/class/leds/blue   delay_on      0664  system   system
+/sys/class/leds/blue   delay_off      0664  system   system
+/sys/class/leds/green   pwm_duty      0664  system   system
+/sys/class/leds/green   pwm_dim_freq      0664  system   system
+/sys/class/leds/red   pwm_duty      0664  system   system
+/sys/class/leds/red   pwm_dim_freq      0664  system   system
+/sys/class/leds/blue   pwm_duty      0664  system   system
+/sys/class/leds/blue   pwm_dim_freq      0664  system   system
+
+/sys/devices/platform/soc/11f00000.i2c/i2c-7/7-0064/leds/red   delay_on      0664  system   system
+/sys/devices/platform/soc/11f00000.i2c/i2c-7/7-0064/leds/red   delay_off      0664  system   system
+/sys/devices/platform/soc/11f00000.i2c/i2c-7/7-0064/leds/green   delay_on      0664  system   system
+/sys/devices/platform/soc/11f00000.i2c/i2c-7/7-0064/leds/green   delay_off      0664  system   system
+/sys/devices/platform/soc/11f00000.i2c/i2c-7/7-0064/leds/leds/blue   delay_on      0664  system   system
+/sys/devices/platform/soc/11f00000.i2c/i2c-7/7-0064/leds/blue   delay_off      0664  system   system
+
+/sys/devices/platform/soc/11f00000.i2c/i2c-7/7-0064/leds/red   pwm_duty      0664  system   system
+/sys/devices/platform/soc/11f00000.i2c/i2c-7/7-0064/leds/red   pwm_dim_freq      0664  system   system
+/sys/devices/platform/soc/11f00000.i2c/i2c-7/7-0064/leds/green   pwm_duty      0664  system   system
+/sys/devices/platform/soc/11f00000.i2c/i2c-7/7-0064/leds/green   pwm_dim_freq      0664  system   system
+/sys/devices/platform/soc/11f00000.i2c/i2c-7/7-0064/leds/blue   pwm_duty      0664  system   system
+/sys/devices/platform/soc/11f00000.i2c/i2c-7/7-0064/leds/blue   pwm_dim_freq      0664  system   system
+
+
 
 #GPIO
 /dev/mtgpio               0600   radio      root
 
 # Camera
 /dev/camera_eeprom*       0660   system     camera
-
-# Charger
-/sys/class/power_supply/battery input_suspend 0660 system system
 
 #FOR VIA MODEM
 /dev/ttySDIO*             0660   radio      sdcard_rw
@@ -193,6 +245,7 @@
 #MTK In-House TEE
 /dev/ttyACM0              0660   radio      radio
 
-# Charger
-/sys/class/power_supply/battery input_suspend 0660    system  system
-
+#TrustKernel
+/dev/tkcoredrv            0660   root       system
+/dev/rpmb0                0660   root       system
+/dev/mmcblk0rpmb          0660   root       system
