@@ -1,0 +1,1 @@
+require board=MD-07P|k6789v1_64
