@@ -539,6 +539,11 @@ vendor/firmware/soc_fm_v1_patch.bin
 vendor/lib64/hw/gatekeeper.trustkernel.so
 vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.so
 
+# Graphics (Composer)
+vendor/bin/hw/android.hardware.graphics.composer@2.3-service:vendor/bin/hw/android.hardware.graphics.composer@2.3-service.md07p
+vendor/lib64/libhwc2on1adapter.so
+vendor/lib64/libhwc2onfbadapter.so
+
 # Graphics
 vendor/bin/hw/mt6789/android.hardware.graphics.allocator@4.0-service-mediatek.mt6789
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
