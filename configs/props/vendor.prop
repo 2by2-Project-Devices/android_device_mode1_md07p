@@ -113,6 +113,7 @@ ro.surface_flinger.protected_contents=true
 ro.surface_flinger.set_idle_timer_ms=3000
 ro.surface_flinger.set_touch_timer_ms=3000
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
+ro.vendor.composer_version=2.1
 vendor.hbm.enable=false
 
 # DRM
@@ -170,7 +171,7 @@ ro.vendor.mediatek.version.branch=alps-mp-s0.mp1.tc8sp2-cs1
 ro.vendor.mediatek.version.release=alps-mp-s0.mp1.tc8sp2-cs1-xm.V1.0.13_mode1.s0mp1.k6789v1.64_P131
 
 # Mediatek
-ro.vendor.mgk_name=mikrn
+ro.vendor.mgk_name=mgk_64_entry_level_k510
 ro.vendor.mgvi_name=mgvi_64_armv82
 ro.vendor.mml.mtk_mml_support=0
 ro.vendor.mtk.c2.vdec.fmt.support.level=1
@@ -179,6 +180,7 @@ ro.vendor.mtk_aal_support=1
 ro.vendor.mtk_audio_alac_support=1
 ro.vendor.mtk_audio_ape_support=1
 ro.vendor.mtk_audio_tuning_tool_ver=V1
+ro.vendor.mtk_backlight_hwc_support=0
 ro.vendor.mtk_blulight_def_support=1
 ro.vendor.mtk_c2k_lte_mode=0
 ro.vendor.mtk_cam_security_support=0
@@ -224,7 +226,7 @@ ro.vendor.pq.mtk_aal_support=1
 ro.vendor.pq.mtk_ai_scence_pq_support=0
 ro.vendor.pq.mtk_ai_sdr_to_hdr_support=0
 ro.vendor.pq.mtk_backlight_smooth_support=0
-ro.vendor.pq.mtk_blulight_def_support=0
+ro.vendor.pq.mtk_blulight_def_support=1
 ro.vendor.pq.mtk_caltm_support=1
 ro.vendor.pq.mtk_clearzoom_support=1
 ro.vendor.pq.mtk_dc_support=0
@@ -249,6 +251,9 @@ ro.vendor.sdr2hdr.by.layer.support=false
 ro.vendor.smvr.p2batch.hd=4
 ro.vendor.smvr.p2batch.vga=8
 ro.vendor.standard.video.enable=false
+
+# Render
+debug.renderengine.backend=skiagl
 
 # NN
 debug.mtk_tflite.target_nnapi=29
