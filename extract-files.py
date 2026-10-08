@@ -43,6 +43,12 @@ def fixup_ndk_platform(libname: str) -> tuple[str, str]:
 patchelf_version = "0_17_2"
 
 blob_fixups: blob_fixups_user_type = {
+    'system_ext/lib64/libimsma.so': blob_fixup()
+        .replace_needed('libsink.so', 'libsink-mtk.so'),
+    'system_ext/lib64/libsink-mtk.so': blob_fixup()
+        .add_needed('libaudioclient_shim.so'),
+    'vendor/bin/hw/mtkfusionrild': blob_fixup()
+        .add_needed('libutils-v32.so'),
     'vendor/bin/hw/android.hardware.security.keymint-service.trustkernel': blob_fixup()
         .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so', 'android.hardware.security.keymint-V3-ndk-mtk.so')
         .replace_needed('android.hardware.security.sharedsecret-V1-ndk_platform.so', 'android.hardware.security.sharedsecret-V1-ndk.so')
@@ -103,7 +109,9 @@ blob_fixups: blob_fixups_user_type = {
     .replace_needed("libutils.so", "libutils-v32.so"),
     (
     "vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2",
+    "vendor/lib/libnvram.so",
     "vendor/lib64/libnvram.so",
+    "vendor/lib64/libsysenv.so",
     "vendor/lib64/libtflite_mtk.so",
     "vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so"
     ): blob_fixup()
