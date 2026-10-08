@@ -26,8 +26,6 @@ ro.mediatek.wlan.wsc=1
 wifi.direct.interface=p2p0
 wifi.interface=wlan0
 wifi.tethering.interface=ap0
-vendor.rild.libargs=-d /dev/ttyC0
-vendor.rild.libpath=mtk-ril.so
 
 # Dexopt
 dalvik.vm.dex2oat64.enabled=true
