@@ -102,6 +102,7 @@ blob_fixups: blob_fixups_user_type = {
     .add_needed("libshim_sensors.so")
     .replace_needed("libutils.so", "libutils-v32.so"),
     (
+    "vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2",
     "vendor/lib64/libnvram.so",
     "vendor/lib64/libtflite_mtk.so",
     "vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so"
