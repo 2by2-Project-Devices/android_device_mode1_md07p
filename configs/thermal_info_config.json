@@ -26,6 +26,7 @@
       {
         "Name": "mtktsAP",
         "Type": "SKIN",
+        "ZoneName": "ap_ntc",
         "HotThreshold": ["NAN", "NAN", "NAN", 50.0, 70.0, 80.0, 90.0],
         "VrThreshold": "50.0",
         "Multiplier": 0.001
