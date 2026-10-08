@@ -74,7 +74,6 @@ persist.vendor.vilte_support=0
 persist.vendor.viwifi_support=0
 persist.vendor.wifienhancelog=1
 persist.vendor.xfrm_support=1
-ro.radio.noril=true
 ro.telephony.default_network=0,0,0,0
 ro.telephony.iwlan_operation_mode=AP-assisted
 ro.vendor.ap_info_monitor=0
