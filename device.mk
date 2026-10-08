@@ -172,6 +172,8 @@ PRODUCT_PACKAGES += \
     PowerOffAlarm
 
 # Radio
+$(call inherit-product, hardware/mediatek/frameworks/mediatek-frameworks.mk)
+
 PRODUCT_PACKAGES += \
     mdota_symlink
 
