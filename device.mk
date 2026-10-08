@@ -194,6 +194,7 @@ PRODUCT_COPY_FILES += \
 $(call soong_config_set_bool,android_hardware_mediatek_usb,audio_accessory_supported,true)
 
 # Wifi
+$(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     wpa_supplicant \
