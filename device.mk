@@ -315,5 +315,7 @@ PRODUCT_SOONG_NAMESPACES += \
 # Shipping API Level
 PRODUCT_SHIPPING_API_LEVEL := 31
 
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
 # Inherit our proprietary vendor
 $(call inherit-product, vendor/mode1/md07p/md07p-vendor.mk)
